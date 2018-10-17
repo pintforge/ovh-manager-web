@@ -1,0 +1,48 @@
+<div data-ng-controller="DomainGeneralInformationsWhoisCtrl as $ctrl">
+    <oui-back-button data-on-click="ctrlTabGeneralInformations.resetView()">
+        <span data-translate="domain_dashboard_whois_button"></span>
+    </oui-back-button>
+
+    <p class="ml-4 pl-5 w-50" data-translate="domain_dashboard_whois_explanation"></p>
+
+    <div class="row">
+        <div class="col-md-4" data-ng-repeat="type in $ctrl.contactTypes">
+            <h3 class="h5" data-translate="{{'domain_dashboard_whois_contact_' + type}}"></h3>
+            <div class="mb-4">
+                <div data-translate="domain_dashboard_whois_email"></div>
+                <oui-radio-toggle-group model="$ctrl.contacts[type].showEmail">
+                    <oui-radio text="{{:: 'common_hide' | translate}}" value="false"></oui-radio>
+                    <oui-radio text="{{:: 'common_display' | translate}}" value="true"></oui-radio>
+                </oui-radio-toggle-group>
+            </div>
+            <div class="mb-4">
+                <div data-translate="domain_dashboard_whois_coordinates"></div>
+                <oui-radio-toggle-group model="$ctrl.contacts[type].showCoordinates">
+                    <oui-radio
+                        data-text="{{:: 'common_hide' | translate}}"
+                        data-value="false"
+                        data-disabled="$ctrl.contacts[type].fieldByField">
+                    </oui-radio>
+                    <oui-radio
+                        data-text="{{:: 'common_display' | translate}}"
+                        data-value="true"
+                        data-disabled="$ctrl.contacts[type].fieldByField">
+                    </oui-radio>
+                </oui-radio-toggle-group>
+            </div>
+            <oui-checkbox data-text="{{:: 'domain_dashboard_whois_field_by_field' | translate}}" data-model="$ctrl.contacts[type].fieldByField"></oui-checkbox>
+            <div class="mb-4" data-ng-if="$ctrl.contacts[type].fieldByField" data-ng-repeat="field in $ctrl.fields">
+                <div>{{:: 'domain_dashboard_whois_field' | translate: { t0: field } }}</div>
+                <oui-radio-toggle-group model="$ctrl.contacts[type].fields[field]">
+                    <oui-radio text="{{:: 'common_hide' | translate}}" value="false"></oui-radio>
+                    <oui-radio text="{{:: 'common_display' | translate}}" value="true"></oui-radio>
+                </oui-radio-toggle-group>
+            </div>
+        </div>
+    </div>
+
+    <oui-button data-variant="primary"
+                data-text="{{:: 'domain_dashboard_whois_validate_button' | translate}}"
+                data-disabled=""
+                data-on-click="$ctrl.validate()"></oui-button>
+</div>
