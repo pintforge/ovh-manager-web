@@ -8049,10 +8049,9 @@ ovh-angular-user-pref@ovh-ux/ovh-angular-user-pref#^0.3.1:
   version "0.3.1"
   resolved "https://codeload.github.com/ovh-ux/ovh-angular-user-pref/tar.gz/71d0b3c0606a2e2052505bda2a8e2ff06b0156e1"
 
-ovh-api-services@^3.24.0:
-  version "3.24.0"
-  resolved "https://registry.yarnpkg.com/ovh-api-services/-/ovh-api-services-3.24.0.tgz#a0ed96b70f23dcdc26b1bfaa26890cc3939d4270"
-  integrity sha512-jo2Jb73Vpy0rKz6Z/qq5b1GAbfu3ayVRKg7yVJmdRnahVYx7QQ5ne7SJQq4xersQh9CAC5TQNr79w0I1p1VLBw==
+ovh-api-services@ovh-ux/ovh-api-services#master:
+  version "3.25.0"
+  resolved "https://codeload.github.com/ovh-ux/ovh-api-services/tar.gz/62515b5f513b5dc532a1dfe2f7b8e0c7bec311fb"
   dependencies:
     lodash "^3.10.1"
 
@@ -8074,10 +8073,9 @@ ovh-module-emailpro@^7.0.9:
     moment "^2.16.0"
     punycode "^1.2.4"
 
-ovh-module-exchange@^9.1.1:
+ovh-module-exchange@ovh-ux/ovh-module-exchange#feat/updateMicrosoftOrderURL:
   version "9.1.1"
-  resolved "https://registry.yarnpkg.com/ovh-module-exchange/-/ovh-module-exchange-9.1.1.tgz#48d75b743db40687b983f3b52b9612a43c877f18"
-  integrity sha512-09TmztCPibPHvHSkY51YmUVdknIg+q5eSkUuDF10mACcdNSX3TkKacVl6WSdCIkrj04cJsjaaO9vHRyLUaDyeA==
+  resolved "https://codeload.github.com/ovh-ux/ovh-module-exchange/tar.gz/5417aec22c28101e58f28a4f25c61ba1300be970"
   dependencies:
     filesize "^3.6.1"
     lodash "~3.9.3"
