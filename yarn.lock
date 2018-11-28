@@ -8036,8 +8036,8 @@ ovh-manager-webfont@ovh-ux/ovh-manager-webfont#^1.0.1:
   resolved "https://codeload.github.com/ovh-ux/ovh-manager-webfont/tar.gz/1d759c46c8c3ead4bc5e887a2336abd124a17c58"
 
 ovh-module-emailpro@ovh-ux/ovh-module-emailpro#feat/email-pro-mxplan:
-  version "7.0.9"
-  resolved "https://codeload.github.com/ovh-ux/ovh-module-emailpro/tar.gz/fb65367b1f34ab522603cba37faff166da8b283a"
+  version "7.0.10"
+  resolved "https://codeload.github.com/ovh-ux/ovh-module-emailpro/tar.gz/e4169026c4252bae4262f146ed4503a7eb8b8c12"
   dependencies:
     angular "~1.6.10"
     lodash "~3.9.3"
