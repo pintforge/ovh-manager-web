@@ -27,12 +27,26 @@ angular
 
         this.selectTypeOfGuide('domainHosting');
 
+        this.helpCenterURLs = Object.keys(this.constants.urls)
+          .reduce(
+            (previousValue, currentSubsidiaryName) => (_.has(this.constants.urls[currentSubsidiaryName], 'support')
+              ? Object.assign(
+                {},
+                previousValue,
+                { [currentSubsidiaryName]: this.constants.urls[currentSubsidiaryName].support },
+              )
+              : previousValue),
+            {},
+          );
+
         return this.User
           .getUser()
-          .then((user) => {
+          .then(({ ovhSubsidiary: subsidiary }) => {
+            this.subsidiary = subsidiary;
+
             this.allGuides = _.get(
               this.constants,
-              `urls.${user.ovhSubsidiary}.guides.all`,
+              `urls.${subsidiary}.guides.all`,
               this.constants.urls.FR.guides.all,
             );
           })
